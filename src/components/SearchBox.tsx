@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { IoSearchSharp } from "react-icons/io5";
 
 const SearchBox = ({ setUrl }: { setUrl: (url: string) => void }) => {
   const [city, setCity] = useState<string>("");
@@ -16,8 +17,8 @@ const SearchBox = ({ setUrl }: { setUrl: (url: string) => void }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handelSumbit}>
+    <div className='border-2 border-white h-16 w-100 flex justify-center items-center rounded-xl'>
+      <form onSubmit={handelSumbit} className='flex h-full w-full'>
         <input
           type='text'
           value={city}
@@ -25,8 +26,11 @@ const SearchBox = ({ setUrl }: { setUrl: (url: string) => void }) => {
             setCity(e.target.value)
           }
           placeholder='Search...'
+          className='bg-purple-200/90 text-gray-600 h-full w-full outline-none rounded-l-xl p-4 text-xl'
         />
-        <button type='submit'>Search</button>
+        <button type='submit' className='text-4xl p-2 bg-purple-200/90 rounded-r-xl '>
+          <IoSearchSharp />
+        </button>
       </form>
     </div>
   );

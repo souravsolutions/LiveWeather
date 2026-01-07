@@ -2,10 +2,8 @@ import Weather from "./components/Weather";
 
 const App = () => {
   return (
-    <div>
-      <div>
-        <Weather />
-      </div>
+    <div className='flex justify-center items-center h-screen w-screen bg-black text-white pb-15'>
+      <Weather />
     </div>
   );
 };

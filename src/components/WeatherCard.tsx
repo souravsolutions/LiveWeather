@@ -7,9 +7,14 @@ interface WeatherCardProps {
 }
 
 const WeatherCard = ({ data, loading, error }: WeatherCardProps) => {
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
   if (error) {
     return <h1>{error}</h1>;
   }
+
   return (
     <div>
       <h1>{data?.main.temp}</h1>

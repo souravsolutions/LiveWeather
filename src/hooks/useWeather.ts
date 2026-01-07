@@ -22,7 +22,11 @@ function useWeather(url: string): WeatherResult {
 
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error(`City not found (${response.status})`);
+          if (response.status === 404) {
+            throw new Error(`city doesn't exist...?`);
+          } else {
+            throw new Error(`Uh...?`);
+          }
         }
         const result: City = await response.json();
 

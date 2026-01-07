@@ -2,8 +2,7 @@
 @import "tw-animate-css";
 
 * {
-  /* background-color: #1A1A1D; */
-  background-color: #181A18;
+  /* background-color: #181A18; */
 }
 
 @custom-variant dark (&:is(.dark *));
