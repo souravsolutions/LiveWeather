@@ -17,7 +17,6 @@ const Weather = () => {
   useEffect(() => {
     data?.weather?.map((w) => {
       const mainW = w.main;
-      console.log(mainW);
 
       switch (mainW) {
         case "Clear":

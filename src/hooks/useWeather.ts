@@ -23,20 +23,24 @@ function useWeather(url: string): WeatherResult {
         const response = await fetch(url);
         if (!response.ok) {
           if (response.status === 404) {
-            throw new Error(`city doesn't exist...?`);
+            setError("city doesn't exist...?");
+            console.log("city doesn't exist...?");
+            // throw new Error(`city doesn't exist...?`);
           } else {
-            throw new Error(`Uh...?`);
+            setError(`Uh...?`);
+            console.log("Uh...?");
+            // throw new Error(`Uh...?`);
           }
         }
         const result: City = await response.json();
 
         setData(result);
       } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError(String(err));
-        }
+        // if (err instanceof Error) {
+        //   setError(err.message);
+        // } else {
+        //   setError(String(err));
+        // }
       } finally {
         setLoading(false);
       }

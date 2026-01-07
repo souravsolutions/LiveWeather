@@ -3,6 +3,7 @@ import WeatherImg from "./WeatherImg";
 
 import humidity from "../assets/icons/humidity.png";
 import wind from "../assets/icons/wind.gif";
+import sheep from "../assets/icons/llama-med.gif";
 
 interface WeatherCardProps {
   data: City | null;
@@ -12,11 +13,19 @@ interface WeatherCardProps {
 
 const WeatherCard = ({ data, loading, error }: WeatherCardProps) => {
   if (loading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div>
+        <img src={sheep} alt='loading' className='h-40 w-40' />
+      </div>
+    );
   }
 
   if (error) {
-    return <h1>{error}</h1>;
+    return (
+      <h1 className='bg-gray-100/50 text-gray-600 p-2 m-1 rounded-full text-center'>
+        {error}
+      </h1>
+    );
   }
 
   return (
