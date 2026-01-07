@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
-* {
-  /* background-color: #181A18; */
+:root {
+  --main-font: 'Atkinson Hyperlegible Mono', monospace;
 }
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -124,4 +126,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+} */

@@ -17,18 +17,22 @@ const SearchBox = ({ setUrl }: { setUrl: (url: string) => void }) => {
   };
 
   return (
-    <div className='border-2 border-white h-16 w-100 flex justify-center items-center rounded-xl'>
+    <div className='border-2 border-white h-16 w-100 flex justify-center items-center rounded-full'>
       <form onSubmit={handelSumbit} className='flex h-full w-full'>
         <input
           type='text'
+          name='city'
           value={city}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setCity(e.target.value)
           }
           placeholder='Search...'
-          className='bg-purple-200/90 text-gray-600 h-full w-full outline-none rounded-l-xl p-4 text-xl'
+          className='bg-purple-200/90 text-gray-600 h-full w-full outline-none rounded-l-full p-4 text-xl'
         />
-        <button type='submit' className='text-4xl p-2 bg-purple-200/90 rounded-r-xl '>
+        <button
+          type='submit'
+          className='text-4xl p-2 bg-purple-200/90 rounded-r-full '
+        >
           <IoSearchSharp />
         </button>
       </form>
