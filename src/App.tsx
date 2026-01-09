@@ -1,8 +1,12 @@
+import { ModeToggle } from "./components/mode-toggle";
 import Weather from "./components/Weather";
 
 const App = () => {
   return (
-    <div className='flex justify-center items-center h-screen w-screen bg-black text-white pb-15'>
+    <div className='flex justify-center items-center h-screen w-screen pb-15'>
+      <div className='position absolute top-1 right-5'>
+        <ModeToggle />
+      </div>
       <Weather />
     </div>
   );
