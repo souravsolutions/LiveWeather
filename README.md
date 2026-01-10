@@ -34,7 +34,7 @@ It shows real-time weather information using a **free public weather API**, feat
 - **Frontend:** React
 - **Language:** TypeScript
 - **Bundler:** Vite
-- **Styling:** Tailwind CSS
+- **Styling & UI:** Tailwind CSS,shadcn/ui
 - **API:** Free Weather API
 - **Version Control:** Git & GitHub
 
