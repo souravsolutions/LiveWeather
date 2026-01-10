@@ -1,6 +1,5 @@
 import { ModeToggle } from "./components/mode-toggle";
 import Weather from "./components/Weather";
-import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
@@ -9,7 +8,6 @@ const App = () => {
         <ModeToggle />
       </div>
       <Weather />
-      <Analytics/>
     </div>
   );
 };
