@@ -68,4 +68,4 @@ open http://localhost:5173
 ## ⭐ Support
 
 If you like this project, don’t forget to star ⭐ the repository
-It motivates me to build more awesome projects!
+It motivates me to build more awesome projects
